@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi página web con texto e imagen</title>
+  <style>
+    body {
+      background-color: #353740;
+      color: #888888;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100px;
+      height: 400px;
+    }
+
+    .image-container img {
+      position: absolute;
+      top: -20%;
+      left: 275%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+    }
+
+    .h1-container {
+      margin-bottom: 10px;
+      text-align: center;
+      margin-top: 0px;
+      margin-left: 20px;
+    }
+
+    .p-container {
+      margin-bottom: 10px;
+      text-align: left;
+      width: 800px;
+      height: 25px;
+      margin-top: 20px;
+      margin-left: -450px;
+    }
+
+    .c-container {
+      margin-bottom: 10px;
+      text-align: left;
+      width: 800px;
+      height: 25px;
+      margin-top: 60px;
+      margin-left: -450px;
+    }
+
+    .t-container {
+      margin-bottom: 10px;
+      text-align: left;
+      width: 800px;
+      height: 25px;
+      margin-top: 10px;
+      margin-left: -450px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: -30px;
+    }
+
+    .button {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .button svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+
+    .button-gray {
+      background-color: #3DDC84;
+    }
+
+    .button-gray:hover {
+      background-color: #1D8F4D;
+    }
+
+    .button-blue {
+      background-color: #4a90e2;
+    }
+
+    .button-blue:hover {
+      background-color: #1c5a99;
+    }
+
+    /* Ajustes de posición de los botones */
+    .button-gray {
+      left: -385px;
+      top: 2px;
+    }
+
+    .button-blue {
+      left: -425px;
+      top: -42px;
+    }
+
+    /* Estilos para la nueva sección */
+    .new-image-container {
+      position: relative;
+      width: 10px;
+      height: 5px;
+      margin-top: 20px;
+    }
+
+    .new-image-container img {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="h1-container">
+    <h1>Bienvenido/a a mi página web</h1>
+  </div>
+  <div class="p-container">
+    <p>Este es mi intento de hacer una página web, mejor dicho.</p>
+  </div>
+  <div class="p-container">
+    <p>Pero bueno, eso no viene al caso.</p>
+  </div>
+  <div class="p-container">
+    <p>Estoy trabajando en un videojuego el cual se controla con los ojos, y quiero que pruebes su demo para informarme de errores y de algunas ideas que tengas para mejorar el juego.</p>
+  </div>
+  <div class="p-container">
+    <p>Puedes descargar la demo escaneando el código, descargando el .exe (para PC) o el .apk (para móvil). También puedes dar clic a la URL que te llevará a otra página donde podrás jugar desde tu navegador.</p>
+  </div>
+  <div class="p-container">
+  <a href="https://picshost.pics/DPKYAV.html">juega a Vision Venture en tu navegador</a>
+   </div>
+  <div class="c-container">
+    <p>Descarga para Windows (exe)</p>
+  </div>
+  <div class="t-container">
+    <p>Descarga para Android (Apk)</p>
+  </div>
+  <div class="button-container">
+    <button id="downloadButtonGray" class="button button-gray">
+      <svg height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: block;">
+        <path d="M17 18v1H6v-1h11zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.8-.7.7 5 5 5-4.9z"></path>
+      </svg>
+    </button>
+    <button id="downloadButtonBlue" class="button button-blue">
+      <svg height="24" viewBox="0 0 24 24" width="24" focusable="false" style="pointer-events: none; display: block;">
+        <path d="M17 18v1H6v-1h11zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.8-.7.7 5 5 5-4.9z"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="image-container">
+    <img src="https://cdn.discordapp.com/attachments/932429630214918155/1129254764681646162/IMG-20230714-WA0000.jpg" alt="Mi imagen">
+  </div>
+
+  <!-- Nueva sección con otra imagen -->
+  <div class="new-image-container">
+    <img src="https://cdn.discordapp.com/attachments/932429630214918155/1131307540093882529/79832072.png" alt="Otra imagen">
+  </div>
+
+  <script>
+    document.getElementById('downloadButtonGray').addEventListener('click', function() {
+      // Código de descarga para el botón gris (igual que antes)
+    var fileUrlGray = 'https://drive.google.com/file/d/1xfa6RsXcHilxrmKpGi1wKpJl5jBIzl0w/view?usp=drivesdk';
+
+      // Cambia el nombre del archivo gris que se descargará
+      var fileNameGray = 'VisionVenture(Apk).zip';
+
+      // Crea un elemento "a" para iniciar la descarga
+      var downloadLinkGray = document.createElement('a');
+      downloadLinkGray.href = fileUrlGray;
+      downloadLinkGray.download = fileNameGray;
+
+      // Simula el clic en el enlace para iniciar la descarga
+      downloadLinkGray.click();
+
+    });
+
+    document.getElementById('downloadButtonBlue').addEventListener('click', function() {
+      var fileUrlBlue = 'https://drive.google.com/file/d/1xj7dJ-iP7Dl0oNtgwvom5fK9O-VZiaRE/view?usp=drivesdk';
+
+      // Cambia el nombre del archivo azul que se descargará
+      var fileNameBlue = 'VisionVenture(Exe).zip';
+
+      // Crea un elemento "a" para iniciar la descarga
+      var downloadLinkBlue = document.createElement('a');
+      downloadLinkBlue.href = fileUrlBlue;
+      downloadLinkBlue.download = fileNameBlue;
+
+      // Simula el clic en el enlace para iniciar la descarga
+      downloadLinkBlue.click();
+    });
+  </script>
+</body>
+</html>
+
